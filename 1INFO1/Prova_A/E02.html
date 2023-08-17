@@ -9,13 +9,54 @@
     - Se o usuário optar por receber auxílio transporte, terá um outro desconto de 6%.
     Calcule e apresente o salário líquido após os descontos, de acordo com a taxação apresentada acima. 
     */
-    
-    //Entrada
 
+    //Entrada
+    const salarioLiquido = Number(prompt(`Informe seu salário liquido:`).trim());
+    const transporte = prompt(`Informe se deseja receber auxilio transporte (Sim ou Nao):`).toLowerCase();
 
     //Processamento
-
-
+    if (salarioLiquido < 2000 && transporte == "sim") {
+        let calculo1 = salarioLiquido * 0.06
+        let calculo2 = salarioLiquido - calculo1
+        alert(`O seu salario liquido após os descontos é R$${calculo2.toFixed(2)}`)
+    }
+    else if (salarioLiquido >= 2000 && salarioLiquido < 3500 && transporte == "sim") {
+        let calculo1 = salarioLiquido * 0.06 * 0.1
+        let calculo2 = salarioLiquido - calculo1
+        alert(`O seu salario liquido após os descontos é R$${calculo2.toFixed(2)}`)
+    }
+    else if (salarioLiquido >= 3500 && salarioLiquido < 6000 && transporte == "sim") {
+        let calculo1 = salarioLiquido * 0.06 * 0.2
+        let calculo2 = salarioLiquido - calculo1
+        alert(`O seu salario liquido após os descontos é R$${calculo2.toFixed(2)}`)
+    }
+    else if (salarioLiquido >= 6000 && transporte == "sim") {
+        let calculo1 = salarioLiquido * 0.06 * 0.3
+        let calculo2 = salarioLiquido - calculo1
+        alert(`O seu salario liquido após os descontos é R$${calculo2.toFixed(2)}`)
+    }
+    else if (salarioLiquido < 2000 && transporte == "nao") {
+        let calculo1 = salarioLiquido
+        alert(`O seu salario liquido após os descontos é R$${calculo1.toFixed(2)}`)
+    }
+    else if (salarioLiquido >= 2000 && salarioLiquido < 3500 && transporte == "sim") {
+        let calculo1 = salarioLiquido * 0.1
+        let calculo2 = salarioLiquido - calculo1
+        alert(`O seu salario liquido após os descontos é R$${calculo2.toFixed(2)}`)
+    }
+    else if (salarioLiquido >= 3500 && salarioLiquido < 6000 && transporte == "sim") {
+        let calculo1 = salarioLiquido * 0.2
+        let calculo2 = salarioLiquido - calculo1
+        alert(`O seu salario liquido após os descontos é R$${calculo2.toFixed(2)}`)
+    }
+    else if (salarioLiquido >= 6000 && transporte == "sim") {
+        let calculo1 = salarioLiquido * 0.3
+        let calculo2 = salarioLiquido - calculo1
+        alert(`O seu salario liquido após os descontos é R$${calculo2.toFixed(2)}`)
+    }
+    else{
+        alert(`Caracter invalido!`);
+    }
     //Saída
 
 </script>
