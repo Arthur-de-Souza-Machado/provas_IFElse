@@ -39,17 +39,17 @@
         let calculo1 = salarioLiquido
         alert(`O seu salario liquido após os descontos é R$${calculo1.toFixed(2)}`)
     }
-    else if (salarioLiquido >= 2000 && salarioLiquido < 3500 && transporte == "sim") {
+    else if (salarioLiquido >= 2000 && salarioLiquido < 3500 && transporte == "nao") {
         let calculo1 = salarioLiquido * 0.1
         let calculo2 = salarioLiquido - calculo1
         alert(`O seu salario liquido após os descontos é R$${calculo2.toFixed(2)}`)
     }
-    else if (salarioLiquido >= 3500 && salarioLiquido < 6000 && transporte == "sim") {
+    else if (salarioLiquido >= 3500 && salarioLiquido < 6000 && transporte == "nao") {
         let calculo1 = salarioLiquido * 0.2
         let calculo2 = salarioLiquido - calculo1
         alert(`O seu salario liquido após os descontos é R$${calculo2.toFixed(2)}`)
     }
-    else if (salarioLiquido >= 6000 && transporte == "sim") {
+    else if (salarioLiquido >= 6000 && transporte == "nao") {
         let calculo1 = salarioLiquido * 0.3
         let calculo2 = salarioLiquido - calculo1
         alert(`O seu salario liquido após os descontos é R$${calculo2.toFixed(2)}`)
